@@ -1,0 +1,2 @@
+# Takashi
+Responsible Chatbot
