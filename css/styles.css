@@ -1,0 +1,173 @@
+/* CSS/styles.css */
+
+/* Add this CSS for the sword slashing animation */
+#sword-animation {
+    background-image: url('../images/sword-animation.gif');
+    width: 100%;
+    height: 100%;
+    animation: swordSlash 2s ease forwards;
+}
+
+@keyframes swordSlash {
+    0% { transform: translateX(-50%) rotate(-45deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(50%) rotate(-45deg); opacity: 0; }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../images/image1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Add this CSS for the samurai animation */
+@keyframes samuraiAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+#greetings {
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: samuraiAnimation 2s ease infinite; /* Apply animation to greetings */
+}
+
+/* Add this CSS for the lightning animation */
+@keyframes lightningAnimation {
+    0% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+    50% { text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.5); }
+    100% { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+}
+
+#game-title {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 48px;
+    color: #8B0000; /* Deep Crimson Red */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    animation: lightningAnimation 3s linear infinite; /* Apply animation to game title */
+}
+
+#scoreboard {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.board-container {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 48px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cell.player1 {
+    color: #ff6347; /* Tomato */
+}
+
+.cell.player2 {
+    color: #00ced1; /* Dark Turquoise */
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4caf50; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+#message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#difficulty {
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* CSS/styles.css */
+
+/* Add this CSS to style the difficulty dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

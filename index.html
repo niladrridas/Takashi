@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takashi: The Samurai Duel Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1 id="game-title">Takashi: The Samurai Duel Game</h1>
+   
+    <div id="scoreboard">
+        <span id="player1-score">Player 1: 0</span> | <span id="player2-score">Player 2: 0</span>
+    </div>
+    <div id="board">
+        <div class="bamboo-forest"></div>
+        <div class="board-container">
+            <div class="board-grid">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+    </div>
+    <div id="controls">
+        <button id="reset-button" onclick="resetGame()">Reset Game</button>
+        <button id="toggle-ai-button" onclick="toggleAI()">Play with AI</button>
+        <select id="difficulty" onchange="setDifficulty()">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+            <option value="superhard">Superhard</option>
+        </select>
+    </div>
+    <div id="message"></div>
+    <audio id="winTune" src="sounds/win-tune.mp3"></audio>
+    <audio id="loseTune" src="sounds/lose-tune.mp3"></audio>
+    <audio id="drawTune" src="sounds/draw-tune.mp3"></audio>
+    <script src="js/script.js"></script>
+
+   <!-- Footer -->
+<footer>
+    <p>&copy; 2024 Takashi: The Samurai Duel Game. All rights reserved. | Disclaimer: This game is designed for brain stimulation and entertainment purposes only. The developer apologizes if any aspect of the game causes discomfort, and emphasizes that it is not intended to promote or glorify violence.</p>
+    <p>Game Wrritten & Developed by <a href="https://x.com/niladrridas" target="_blank">Niladri Das</a></p>
+</footer>
+
+</body>
+</html>
