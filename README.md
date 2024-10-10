@@ -1,44 +1,103 @@
-# Takashi AI System - Ultimate Game Intelligence
+# Takashi: The Samurai Duel Game
 
-**Welcome to the Takashi AI Experience, where smart gameplay meets strategic depth.** The AI featured in this game isn’t your standard machine learning model—no complex neural networks or deep learning algorithms. Instead, it's an artfully crafted rule-based system designed to challenge you at every level. Don't let its simplicity fool you—this AI packs a punch through carefully tuned logic and strategic prowess.
+Welcome to **Takashi: The Samurai Duel Game**! This is a web-based game where two players (or one player against AI) take turns to place their symbols on a 3x3 grid. The first player to align three symbols horizontally, vertically, or diagonally wins the game.
 
-## 🚀 **AI Overview**
+## Table of Contents
 
-At its core, the AI in this game uses **rule-based logic**—straightforward, yet potent. Each level of difficulty presents unique challenges to engage players of all skill levels. Let’s explore the different aspects that make Takashi’s AI truly shine.
+- [Overview](#overview)
+- [Features](#features)
+- [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-### 🧠 **Rule-Based AI: Simple, Yet Effective**
-- **What is it?** Rule-based AI operates using predefined rules and logical patterns. Instead of learning from data, it follows clear-cut instructions to simulate intelligence. Think of it as a master strategist following playbooks, rather than a player learning on the go.
-  
-### 🎮 **Levels of Difficulty**
-- **Easy Mode**: The AI plays randomly, making it perfect for beginners or those looking for a casual game. You’ll see moves with little to no strategy.
-- **Medium Mode**: The AI steps up its game by blocking your winning moves and seizing victory when it can. It employs basic tactics like taking the center or corners.
-- **Hard Mode**: A refinement of Medium Mode, with better planning and prioritization. It’s more thoughtful in its approach, but still leaves some room for player victories.
-- **Superhard Mode**: This is where things get serious. The AI begins to anticipate your strategies, blocking your every move and making optimal choices. It’s not unbeatable, but it certainly plays like it!
+## Overview
 
-## 🧩 **Key Features of Takashi AI**
-1. **Intelligent Decision Making**: The AI assesses the board and reacts in real-time to shifting gameplay dynamics.
-2. **Strategic Depth**: Based on difficulty, the AI blocks, wins, and prioritizes critical game spaces.
-3. **Dynamic Behavior**: Each level presents a new personality, adapting its strategy based on the game state.
+This game is built using HTML, CSS, and JavaScript. It includes features such as AI opponent, different difficulty levels, and background selection.
 
-## ⚡ **Why This Counts as AI**
-Despite its rule-based nature, the AI delivers an engaging, strategic experience that simulates human-like decision-making. Here’s why it fits under the AI umbrella:
-- **Automated Intelligence**: It autonomously decides and reacts, embodying the essence of artificial intelligence.
-- **Heuristic-Based Play**: Even without learning from data, the AI uses predefined logic to simulate intelligent gameplay.
-- **Multiple Complexity Levels**: Whether it’s Easy or Superhard, each mode offers a dynamic challenge, providing the core ingredients of a satisfying AI-driven experience.
+## Features
 
-## 🛠️ **Potential AI Upgrades**
-Curious how to make the AI even smarter? Here are a few ways to take it from rule-based to super-advanced:
-1. **Minimax Algorithm**: Introduce a depth-based search that evaluates every possible move, predicting future moves to minimize losses and maximize gains.
-2. **Alpha-Beta Pruning**: An optimization of Minimax, this technique reduces unnecessary calculations, allowing the AI to process moves faster and more efficiently.
-3. **Reinforcement Learning**: A true AI evolution. The system could learn from its mistakes, adapt based on player behavior, and become a more formidable opponent over time.
+- Two-player mode
+- Play against AI with different difficulty levels
+- Background selection before starting the game
+- Scoreboard to keep track of wins
+- Sound effects for win, lose, and draw
+- Feedback submission form
 
-## 🎯 **Limitations of the Current System**
-- **No Learning**: Unlike advanced AIs, this system doesn’t adapt after multiple games. It’s pre-programmed and static.
-- **Predictable Patterns**: Especially on higher levels, it can become predictable once you understand its rule-based decision-making.
+## Setup Instructions
 
-## 🌟 **Final Thoughts**
-Takashi’s AI may be simple by design, but it brings a robust and engaging challenge to every match. Whether you’re playing casually or on the edge of your seat, you’ll find a worthy adversary in this rule-based system. For an ultimate showdown, bring in more advanced algorithms, but for now—enjoy the smart, strategic thinking that Takashi offers.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/niladrridas/takashi-samurai-duel-game.git
+   cd takashi-samurai-duel-game
+   ```
 
----
+2. Open the project in your preferred code editor (e.g., Visual Studio Code):
+```
+code .
+```
 
-**Takashi AI: Simple. Smart. Sophisticated. Ready to Play?**
+3. Open index.html in your web browser to start the game.
+
+## Usage
+
+1. When you open the game, a modal will appear with game rules and instructions.
+2. Select a background image by clicking on "Background 1" or "Background 2".
+3. Click "OK" to start the game.
+4. Use the controls to reset the game or toggle AI mode.
+5. Choose the difficulty level for AI from the dropdown menu.
+6. Enter your research interest, game strategy, and feedback in the provided form and submit it.
+
+## Project Structure
+
+```
+project-root/
+│
+├── img/
+│   ├── game.png
+│   └── image1.jpg
+│
+├── css/
+│   └── styles.css
+│
+├── js/
+│   └── script.js
+│
+├── sounds/
+│   ├── win-tune.mp3
+│   ├── lose-tune.mp3
+│   └── draw-tune.mp3
+│
+└── [index.html]
+```
+
+### Main Files
+- **index.html**: The main HTML file that contains the structure of the game.
+- **css/styles.css**: The CSS file that styles the game.
+- **js/script.js**: The JavaScript file that contains the game logic.
+- **img/**: Directory containing background images.
+- **sounds/**: Directory containing sound effects.
+
+## Contributing
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature-branch).
+3. Make your changes.
+4. Commit your changes (git commit -m 'Add some feature').
+5. Push to the branch (git push origin feature-branch).
+6. Open a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Explanation
+
+- **Overview**: Provides a brief description of the game.
+- **Features**: Lists the main features of the game.
+- **Setup Instructions**: Step-by-step instructions to set up the project locally.
+- **Usage**: Instructions on how to use the game.
+- **Project Structure**: Describes the directory structure and main files.
+- **Contributing**: Guidelines for contributing to the project.
+- **License**: Information about the project's license.
