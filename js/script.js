@@ -9,6 +9,7 @@ let aiEnabled = false;
 let difficulty = 'easy';
 let player1Score = 0;
 let player2Score = 0;
+let selectedBackground = '';
 
 // Function to display greeting message
 function displayGreeting() {
@@ -286,6 +287,15 @@ function submitFeedback() {
 function startGame() {
     document.getElementById('rules-modal').style.display = 'none';
 }
+
+// Function to set background
+function setBackground(image) {
+    document.body.style.backgroundImage = `url('img/${image}')`;
+}
+
+// Add event listeners to background buttons
+document.getElementById('bg1-button').addEventListener('click', () => setBackground('game.png'));
+document.getElementById('bg2-button').addEventListener('click', () => setBackground('image1.jpg'));
 
 // Add event listener to the start game button
 document.getElementById('start-game-button').addEventListener('click', startGame);
