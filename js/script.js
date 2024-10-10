@@ -124,8 +124,7 @@ function playAI() {
 
 // AI Move: Easy (Random)
 function playAIRandom() {
-    const emptyCells = Array.from(board.children).
-    filter(cell => !cell.textContent);
+    const emptyCells = Array.from(board.children).filter(cell => !cell.textContent);
     const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
     makeMove(randomCell);
 }
@@ -267,6 +266,29 @@ function playWinTune() {
 function playDrawTune() {
     drawTune.play();
 }
+
+// Function to submit feedback
+function submitFeedback() {
+    const researchInterest = document.getElementById('research-interest').value;
+    const strategy = document.getElementById('strategy').value;
+    const feedback = document.getElementById('feedback').value;
+
+    // Example of processing the feedback
+    console.log('Research Interest:', researchInterest);
+    console.log('Strategy:', strategy);
+    console.log('Feedback:', feedback);
+
+    // Display a message to the user
+    document.getElementById('message').innerText = 'Thank you for your feedback!';
+}
+
+// Function to hide the rules modal and start the game
+function startGame() {
+    document.getElementById('rules-modal').style.display = 'none';
+}
+
+// Add event listener to the start game button
+document.getElementById('start-game-button').addEventListener('click', startGame);
 
 // Display greeting when the game starts
 window.onload = displayGreeting;

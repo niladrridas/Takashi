@@ -7,48 +7,89 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1 id="game-title">Takashi: The Samurai Duel Game</h1>
-   
-    <div id="scoreboard">
-        <span id="player1-score">Player 1: 0</span> | <span id="player2-score">Player 2: 0</span>
-    </div>
-    <div id="board">
-        <div class="bamboo-forest"></div>
-        <div class="board-container">
-            <div class="board-grid">
-                <div class="cell" data-index="0"></div>
-                <div class="cell" data-index="1"></div>
-                <div class="cell" data-index="2"></div>
-                <div class="cell" data-index="3"></div>
-                <div class="cell" data-index="4"></div>
-                <div class="cell" data-index="5"></div>
-                <div class="cell" data-index="6"></div>
-                <div class="cell" data-index="7"></div>
-                <div class="cell" data-index="8"></div>
-            </div>
+    <header>
+        <h1 id="game-title">Takashi: The Samurai Duel Game</h1>
+    </header>
+
+    <!-- Modal for rules and instructions -->
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Rules and Instructions</h2>
+            <p>Welcome to Takashi: The Samurai Duel Game!</p>
+            <ul>
+                <li>Player 1 uses 'X' and Player 2 (or AI) uses 'O'.</li>
+                <li>Take turns to place your symbol on the board.</li>
+                <li>The first player to align three symbols horizontally, vertically, or diagonally wins.</li>
+                <li>Music will play when you win, lose, or draw.</li>
+                <li>Use the controls to reset the game or toggle AI mode.</li>
+            </ul>
+            <button id="start-game-button">OK</button>
         </div>
     </div>
-    <div id="controls">
-        <button id="reset-button" onclick="resetGame()">Reset Game</button>
-        <button id="toggle-ai-button" onclick="toggleAI()">Play with AI</button>
-        <select id="difficulty" onchange="setDifficulty()">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-            <option value="superhard">Superhard</option>
-        </select>
-    </div>
-    <div id="message"></div>
+
+    <main>
+        <section id="scoreboard">
+            <h2>Scoreboard</h2>
+            <span id="player1-score">Player 1: 0</span> | <span id="player2-score">Player 2: 0</span>
+        </section>
+
+        <section id="board">
+            <div class="bamboo-forest"></div>
+            <div class="board-container">
+                <div class="board-grid">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="controls">
+            <h2>Game Controls</h2>
+            <button id="reset-button" onclick="resetGame()">Reset Game</button>
+            <button id="toggle-ai-button" onclick="toggleAI()">Play with AI</button>
+            <label for="difficulty">Choose Difficulty:</label>
+            <select id="difficulty" onchange="setDifficulty()">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="superhard">Superhard</option>
+            </select>
+        </section>
+
+        <section id="phd-inputs">
+            <h2>PhD Inputs</h2>
+            <label for="research-interest">Research Interest:</label>
+            <input type="text" id="research-interest" placeholder="Enter your research interest" />
+
+            <label for="strategy">Game Strategy:</label>
+            <input type="text" id="strategy" placeholder="Enter your game strategy" />
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" rows="4" placeholder="Provide your feedback about the game"></textarea>
+
+            <button id="submit-feedback" onclick="submitFeedback()">Submit Feedback</button>
+        </section>
+
+        <div id="message"></div>
+    </main>
+
     <audio id="winTune" src="sounds/win-tune.mp3"></audio>
     <audio id="loseTune" src="sounds/lose-tune.mp3"></audio>
     <audio id="drawTune" src="sounds/draw-tune.mp3"></audio>
     <script src="js/script.js"></script>
 
-   <!-- Footer -->
-<footer>
-    <p>&copy; 2024 Takashi: The Samurai Duel Game. All rights reserved. | Disclaimer: This game is designed for brain stimulation and entertainment purposes only. The developer apologizes if any aspect of the game causes discomfort, and emphasizes that it is not intended to promote or glorify violence.</p>
-    <p>Game Written & Developed by <a href="https://x.com/niladrridas" target="_blank">Niladri Das</a></p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Takashi: The Samurai Duel Game. All rights reserved. | Disclaimer: This game is for entertainment only and not intended to promote violence.</p>
+        <p>Developer's Profile: <a href="https://x.com/niladridas_x" target="_blank" style="color: red;">X</a></p>
+    </footer>
 
 </body>
 </html>
